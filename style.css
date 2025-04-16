@@ -17,7 +17,6 @@
 @define-color green #A7C080;
 
 @define-color base alpha(#000000, 0.1);
-/* @define-color surface alpha(@lavender, 0.15); */
 @define-color surface alpha(#000000, 0.5);
 @define-color text #D3C6AA;
 @define-color hoverBg alpha(@bg1, 1);
