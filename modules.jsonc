@@ -101,11 +101,11 @@
     ]
   },
   "bluetooth": {
-    "format-disabled": "",
-    "format-off": "",
+    "format-disabled": "B",
+    "format-off": "B",
     "interval": 30,
     "on-click": "blueman-manager",
-    "format-no-controller": ""
+    "format-no-controller": "B"
   },
   "user": {
     "format": "{user}",

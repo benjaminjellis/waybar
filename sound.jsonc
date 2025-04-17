@@ -18,8 +18,8 @@
       ]
     },
     "scroll-step": 5,
-    "on-click-right": "pavucontrol",
-    "on-click": "amixer set Master toggle"
+    "on-click-right": "blueman-manager"
+    // "on-click": "amixer set Master toggle"
   },
   "pulseaudio#mic": {
     "format": "{icon} {format_source}",

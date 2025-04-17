@@ -16,8 +16,8 @@
 @define-color bg1 #343F44;
 @define-color green #A7C080;
 
-@define-color base alpha(#000000, 0.1);
-@define-color surface alpha(#000000, 0.5);
+@define-color base alpha(#343F44, 0.1);
+@define-color surface alpha(#2D353B, 0.5);
 @define-color text #D3C6AA;
 @define-color hoverBg alpha(@bg1, 1);
 @define-color hoverFg #000000;
@@ -113,6 +113,7 @@ window#waybar.empty #window {
 
 #custom-appmenu,
 #custom-notification {
+  background-color: @surface;
   font-size: 24px;
   min-width: 32px;
   min-height: 32px;
