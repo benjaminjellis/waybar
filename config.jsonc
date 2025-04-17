@@ -16,10 +16,11 @@
     "~/.config/waybar/media.jsonc",
     "~/.config/waybar/sound.jsonc"
   ],
+  "tray": {},
   "modules-left": [
     "custom/padd",
     "custom/appmenu",
-    "group/quicklinks",
+    // "group/quicklinkblueman-managers",
     "tray",
     "hyprland/window"
   ],
@@ -32,6 +33,7 @@
     // "mpd",
     "group/sound",
     "group/hardware",
+    "battery",
     "clock",
     "custom/notification"
   ]

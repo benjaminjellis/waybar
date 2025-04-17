@@ -1,8 +1,8 @@
 {
   "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-bluetooth": "{volume}% {icon} ",
-    "format-bluetooth-muted": "  {icon} ",
+    // "format": "{icon} {volume}%",
+    // "format-bluetooth": "{volume}% {icon} ",
+    // "format-bluetooth-muted": "  {icon} ",
     "format-muted": " ",
     "format-icons": {
       "headphone": "",
@@ -18,8 +18,7 @@
       ]
     },
     "scroll-step": 5,
-    "on-click-right": "blueman-manager"
-    // "on-click": "amixer set Master toggle"
+    "on-click": "amixer set Master toggle"
   },
   "pulseaudio#mic": {
     "format": "{icon} {format_source}",
