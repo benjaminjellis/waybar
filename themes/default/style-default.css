@@ -1,11 +1,8 @@
-/* @import url('../../.cache/wal/colors-waybar.css'); */
-@define-color background #2D353B;
-@define-color foreground #D3C6AA;
-@define-color color9 #A7C080;
+@import url('../../.cache/wal/colors-waybar.css');
 
 * {
-    font-size:13px;
-    font-family: "Liga SFMono Nerd Font";
+    font-size:15px;
+    font-family: "CodeNewRoman Nerd Font Propo";
 }
 window#waybar{
     all:unset;
