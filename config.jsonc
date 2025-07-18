@@ -1,0 +1,144 @@
+{
+  "height": 44, // Waybar height (to be removed for auto height)
+  "layer": "top", // Waybar at top layer
+  "modules-left": [
+    "custom/launcher",
+    "tray",
+    "custom/spotify"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "bluetooth",
+    "network",
+    "pulseaudio",
+    "backlight",
+    "clock",
+    "battery"
+  ],
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    // "format-icons": {
+    //   "1": "",
+    //   "2": "",
+    //   "3": "",
+    //   "4": "󰴒",
+    //   "5": "",
+    //   "6": "󰙯",
+    //   "7": "󰎈",
+    //   "urgent": "",
+    //   "default": ""
+    // },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%d %b, %I:%M %p}",
+    "format-alt": "{:%a %b %d, %G}"
+  },
+  "bluetooth": {
+    "format": "",
+    "on-click": "blueman-manager"
+  },
+  "backlight": {
+    "device": "eDP-1",
+    "format": "{icon}",
+    "tooltip-format": "{percent}",
+    "format-icons": [
+      "󱩎 ",
+      "󱩏 ",
+      "󱩐 ",
+      "󱩑 ",
+      "󱩒 ",
+      "󱩓 ",
+      "󱩔 ",
+      "󱩕 ",
+      "󱩖 ",
+      "󰛨 "
+    ],
+    "on-scroll-up": "~/.config/waybar/scripts/brightness.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness.sh --dec"
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰈁 ",
+    "format-disconnected": "󰖪",
+    // "tooltip-format": "{essid}",
+    "on-click": "wezterm nmtui",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        "󰕾"
+      ]
+    },
+    "on-click": "pavucontrol &",
+    "on-click-right": "pamixer -t",
+    "scroll-step": 5,
+    "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
+    "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec"
+  },
+  "battery": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-full": "{icon}  Full",
+    "format-alt": "{icon}  {time}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-time": "{H}h {M}min",
+    "tooltip": true
+  },
+  "custom/spotify": {
+    "exec": "uv run ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+    "format": "  {}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "~/.config/rofi/scripts/launcher"
+  }
+}
