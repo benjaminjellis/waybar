@@ -134,7 +134,8 @@ class PlayerManager:
         else:
             track_info = title
 
-        track_info = track_info[:100]
+        if len(track_info) >= 50:
+            track_info = track_info[:50] + "..."
 
         if track_info:
             if player.props.status == "Playing":

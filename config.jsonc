@@ -35,7 +35,7 @@
     "format-icons": {
       "1": "",
       "2": "󰈹",
-      "3": " ",
+      "3": "",
       "10": "󰒱"
       // "4": "󰴒",
       // "5": "",
@@ -51,6 +51,14 @@
   "tray": {
     // "icon-size": INT
     "spacing": 4
+  },
+  "network": {
+    "format-wifi": ", ({signalStrength}%)",
+    "format-ethernet": " {ifname}",
+    "tooltip-format": " {ifname} via {gwaddr}",
+    "format-linked": ", ({signalStrength}%)",
+    "format-disconnected": "Disconnected ⚠ {ifname}",
+    "format-alt": " {ifname}: {ipaddr}/{cidr}"
   },
   "clock": {
     "interval": 60,
