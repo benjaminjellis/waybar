@@ -34,8 +34,8 @@
     "on-scroll-down": "hyprctl dispatch workspace e-1",
     "format-icons": {
       "1": "",
-      "2": "󰈹",
-      "3": "",
+      "2": "",
+      "3": "󰈹",
       "10": "󰒱"
       // "4": "󰴒",
       // "5": "",
@@ -130,14 +130,14 @@
     "on-scroll-up": "~/.config/waybar/scripts/volume.sh --inc",
     "on-scroll-down": "~/.config/waybar/scripts/volume.sh --dec"
   },
-  "custom/spotify": {
-    "exec": "uv run ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-    "format": "  󰁔 {}",
-    "return-type": "json",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next"
-  },
+  // "custom/spotify": {
+  //   "exec": "uv run ~/.config/waybar/scripts/mediaplayer.py --player spotify",
+  //   "format": "  󰁔 {}",
+  //   "return-type": "json",
+  //   "on-click": "playerctl play-pause",
+  //   "on-scroll-up": "playerctl previous",
+  //   "on-scroll-down": "playerctl next"
+  // },
   "wireplumber": {
     "format": "{volume}%   ",
     "format-muted": "",
